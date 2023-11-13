@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+            <ul>Title - {{ posts.title }}</ul>
+            <li>content - {{ posts.content }}</li>
+                Comments for this post
+                       <p></p>
+            {% for comment in posts.comments.all %}
+                {{  comment.title }}
+                       <p></p>
+                Author - {{  comment.user }}
+                  {{  comment.created_date }}
+                       <p></p>
+            {% endfor %}
+            <li>pub_date - {{ posts.pub_date }}</li>
+            <li>pk - {{posts.pk }}</li>
+            <li>publisher - {{posts.publisher }}</li>
+            <li>categories - {{posts.categories }}</li>
+
+</body>
+</html>

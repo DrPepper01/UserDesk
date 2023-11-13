@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body>
+            Title - {{ categories.title }}
+            <p></p>
+            Description - {{ categories.description }}
+            <p></p>
+            ID: {{ categories.pk }}
+            <p></p>
+                All related posts:
+            {% for post in posts %}
+                <li>{{ post.title}}</li>
+                    <p></p>
+            {% endfor %}
+
+
+</body>
+</html>
